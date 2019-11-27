@@ -3,7 +3,7 @@ print('|  List Data Type                                                 |')
 print('|  1. Indexing                                                    |')
 print('|  2. Slicing                                                     |')
 print('|  3. Operation                                                   |')
-print('|  4. Modified & Remove                                       |')
+print('|  4. Modified & Remove                                           |')
 print('|  5. Functions                                                   |')
 print("===================================================================\n\n")
 
