@@ -3,6 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from zlib import crc32
 
+from sklearn.model_selection import train_test_split
+
 def Get_Housing_Data():
     csv_path = "./04_Hands_on_Machine_Learning/datasets/housing/housing.csv"
     return pd.read_csv(csv_path)
@@ -34,6 +36,15 @@ def split_train_test_by_id(data, test_ratio, id_column):
 
 
 housing = Get_Housing_Data()
+train_set, test_set = train_test_split(housing, test_size=0.2, random_state=42)
+print(train_set.info())
+print(test_set.info())
+
+# housing_with_id = housing.reset_index()
+# housing_with_id["id"] = housing["longitude"]*1000 + housing["latitude"]
+
+# train_set, test_set = split_train_test_by_id(housing_with_id, 0.2, "id")
+
 # Print_Houisng(housing)
 # Plt_Housing(housing)
 # train_set, test_set = split_train_test(housing, 0.2)
