@@ -1,3 +1,6 @@
 .vscode
 __pycache__
 .gitignore
+04_Hands_on_Machine_Learning/donwload_data.py
+04_Hands_on_Machine_Learning/regression.py
+04_Hands_on_Machine_Learning/datasets/housing/housing.csv

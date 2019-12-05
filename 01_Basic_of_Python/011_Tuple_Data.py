@@ -1,0 +1,63 @@
+print('===================================================================')
+print('|  Tuple Data Type                                                |')
+print("===================================================================\n\n")
+
+print('1. Definition')
+tuA = (1, 'KDH', 3.5, 2)
+tuB = tuple(range(3,15,3)) + tuple(range(100,1000,100))
+tuC = (1,)
+tuD = (1)
+tuE = 2, 4, 6, 8
+tuF = tuple("Tweedy") + tuple(range(1,5,1))
+tuG = tuple("kHD")*2
+print('    1) tuA is', tuA)
+print('       tuB is', tuB)
+print('       tuC is', tuC)
+print('       tuD is', tuD)
+print('       tuE is', tuE)
+print('       tuF is', tuF)
+print('       tuG is', tuG, '\n')
+
+print('2. Indexing')
+tuA = tuple("Tweedy")
+print('    1) tuA is', tuA)
+print('       tuA[0] is', tuA[0])
+print('       tuA[-1] is', tuA[-1])
+print('       tuA[:4] is', tuA[:4])
+print('       tuA[2:] is', tuA[2:], '\n')
+
+print('3. Loop')
+tuA = tuple("KDH JSK KSJ KMG") + tuple(range(3,10,3))
+print('    1) tuA is', tuA)
+for i in tuA:
+    print('       Looping by for and print each element "%c"' % str(i))
+print('\n')
+
+print('4. Multipe Return for Function')
+tuA = tuple(range(3,15,3)) + tuple(range(100,1000,100))
+def minmax(items):
+    return min(items), max(items)
+lower, upper = minmax(tuA)
+print('    1) tuA is', tuA)
+print('       Min of tuA is', lower)
+print('       Max of tuA is', upper, '\n')
+
+print('5. ETC')
+(a,b,(c,d)) = (4,3,(2,1))
+print('    1) a is', a)
+print('       b is', b)
+print('       c is', c)
+print('       d is', d)
+a, b = 'A', 'B'
+print('    2) a is', a)
+print('       b is', b)
+a, b = b, a
+print('       switch a and b')
+print('       a is', a)
+print('       b is', b)
+print('    3) in')
+tuA = tuple(range(3,15,3)) + tuple(range(100,1000,100))
+print('       tuA is', tuA)
+print('       100 in tuA is', 100 in tuA)
+print('       150 in tuA is', 150 in tuA)
+print('       150 not in tuA is', 150 not in tuA)
